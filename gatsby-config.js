@@ -1,5 +1,7 @@
 const path = require(`path`)
 
+const ANALYZE = process.env.ANALYZE === '1'
+
 module.exports = {
   siteMetadata: {
     title: `Gatsbygram`,
@@ -73,5 +75,12 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
-  ],
+    ANALYZE && {
+      resolve: 'gatsby-plugin-webpack-bundle-analyser-v2',
+      options: {
+        analyzerMode: 'static',
+        analyzerPort: '3001',
+      },
+    },
+  ].filter(Boolean),
 }
