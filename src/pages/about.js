@@ -55,10 +55,15 @@ class About extends React.Component {
             />
           </p>
           <p>
-            <img
-              src="/images/dog-dancing.gif"
-              alt="Dog dancing"
-            />
+            <video
+              autoPlay
+              loop
+              playsInline
+              muted
+              poster="https://res.cloudinary.com/schmitzc/image/upload/v1554747225/dog-dancing.jpg"
+            >
+              <source src="https://res.cloudinary.com/schmitzc/image/upload/v1554747225/dog-dancing.webm" type="video/webm" />
+            </video>
           </p>
         </div>
       </Layout>
