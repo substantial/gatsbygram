@@ -1,12 +1,6 @@
 import Typography from "typography"
 
 const options = {
-  googleFonts: [
-    {
-      name: `Space Mono`,
-      styles: [`400`, `400i`, `700`, `700i`],
-    },
-  ],
   baseFontSize: `18px`,
   baseLineHeight: 1.4,
   headerColor: `hsla(0,0%,0%,0.8)`,
