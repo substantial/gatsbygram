@@ -16,4 +16,4 @@ const Video = ({ videoId}) => (
   </video>
 )
 
-export default Video
+export default React.memo(Video)
