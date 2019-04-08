@@ -2,6 +2,7 @@ import * as PropTypes from "prop-types"
 import chunk from "lodash/chunk"
 import React from "react"
 import { graphql } from "gatsby"
+import { Helmet } from "react-helmet"
 
 import { rhythm, scale } from "../utils/typography"
 import presets from "../utils/presets"
@@ -70,6 +71,9 @@ class Index extends React.Component {
 
     return (
       <Layout location={this.props.location}>
+        <Helmet>
+          <title>Gatsbygram</title>
+        </Helmet>
         <div
           css={{
             display: `flex`,

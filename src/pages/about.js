@@ -1,4 +1,5 @@
 import React from "react"
+import { Helmet } from "react-helmet"
 import { rhythm } from "../utils/typography"
 import Layout from "../layouts"
 
@@ -6,6 +7,9 @@ class About extends React.Component {
   render() {
     return (
       <Layout location={this.props.location}>
+        <Helmet>
+          <title>About Gatsbygram</title>
+        </Helmet>
         <div
           css={{
             padding: rhythm(3 / 4),
