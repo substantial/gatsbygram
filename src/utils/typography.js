@@ -23,7 +23,7 @@ const options = {
         lineHeight: 1.1,
       },
       a: {
-        color: `#3897f0`,
+        color: `#3846f0`,
       },
     }
   },

@@ -56,6 +56,12 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
+    {
+      resolve: 'gatsby-plugin-html-attributes',
+      options: {
+        lang: 'en'
+      }
+    },
     ANALYZE && {
       resolve: 'gatsby-plugin-webpack-bundle-analyser-v2',
       options: {
