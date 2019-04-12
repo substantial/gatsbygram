@@ -1,6 +1,5 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-import { say } from 'cowsay-browser'
 import { rhythm } from "../utils/typography"
 import Layout from "../layouts"
 
@@ -11,8 +10,10 @@ class About extends React.Component {
   }
 
   componentDidMount() {
-    const cowTalk = say({text: 'Gatsbygram is an example website built with the JavaScript web'})
-    this.setState({cowTalk})
+    import('cowsay-browser').then((cowsay) => {
+      const cowTalk = cowsay.say({text: 'Gatsbygram is an example website built with the JavaScript web'})
+      this.setState({cowTalk})
+    })
   }
 
   render() {
