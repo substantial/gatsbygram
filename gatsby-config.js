@@ -43,7 +43,24 @@ module.exports = {
     // configuration as well as setting up optimized server
     // rendering and client re-hydration.
     `gatsby-plugin-glamor`,
-    `gatsby-plugin-netlify`,
+    {
+      resolve: 'gatsby-plugin-netlify',
+      options: {
+        mergeLinkHeaders: false,
+        mergeCachingHeaders: false,
+        mergeSecurityHeaders: true,
+        headers: {
+          '/*.js': [
+            `Cache-Control: public, max-age=31536000,immutable`,
+            'Content-Type: text/javascript',
+          ],
+          '/*.css': [
+            `Cache-Control: public, max-age=31536000,immutable`,
+            'Content-Type: text/javascript',
+          ],
+        },
+      },
+    },
     // This plugin sets up Google Analytics for you.
     {
       resolve: `gatsby-plugin-google-analytics`,
