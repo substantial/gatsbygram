@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet"
 import { say } from 'cowsay-browser'
 import { rhythm } from "../utils/typography"
 import Layout from "../layouts"
+import Video from "../components/video"
 
 class About extends React.Component {
   constructor(props) {
@@ -50,15 +51,12 @@ class About extends React.Component {
                 width: "100%",
                 height: "auto",
               }}
-              src="/images/adele.jpg"
+              src="https://res.cloudinary.com/schmitzc/image/upload/c_limit,f_auto,w_885/v1554746909/adele.jpg"
               alt="Adele"
             />
           </p>
           <p>
-            <img
-              src="/images/dog-dancing.gif"
-              alt="Dog dancing"
-            />
+            <Video videoId="dog-dancing" />
           </p>
         </div>
       </Layout>
