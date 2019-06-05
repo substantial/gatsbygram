@@ -50,7 +50,7 @@ class About extends React.Component {
                 width: "100%",
                 height: "auto",
               }}
-              src="/images/adele.jpg"
+              src="https://res.cloudinary.com/schmitzc/image/upload/c_limit,f_auto,w_885/v1554746909/adele.jpg"
               alt="Adele"
             />
           </p>
